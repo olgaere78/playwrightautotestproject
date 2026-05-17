@@ -1,0 +1,26 @@
+{
+  "name": "playwrightautotestproject",
+  "version": "1.0.0",
+  "description": "This project is a Playwright + TypeScript automation framework for UI tests with API setup and cleanup.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/olgaere78/playwrightautotestproject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://gitlab.com/olgaere78/playwrightautotestproject/issues"
+  },
+  "homepage": "https://gitlab.com/olgaere78/playwrightautotestproject#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.8.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}

@@ -1,0 +1,16 @@
+image: mcr.microsoft.com/playwright:v1.54.0-noble
+
+stages:
+  - test
+
+ui-tests:
+  stage: test
+  script:
+    - npm ci
+    - npx playwright test --project=ui-chromium
+  artifacts:
+    when: always
+    paths:
+      - playwright-report/
+      - test-results/
+    expire_in: 7 days
