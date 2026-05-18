@@ -24,4 +24,3 @@ export class MainPageLocators {
   getCheckboxByTitle = (title: string): Locator =>
     this.page.getByTestId('todo-item').filter({ hasText: title }).getByRole('checkbox');
 }
-

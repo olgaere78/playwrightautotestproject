@@ -3,9 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const baseURL =
-  process.env.BASE_URL ??
-  'https://demo.playwright.dev/todomvc/#/';
+const baseURL = process.env.BASE_URL ?? 'https://demo.playwright.dev/todomvc/#/';
 
 export default defineConfig({
   testDir: './tests',

@@ -53,19 +53,19 @@ export class MainPage extends BasePage {
     await expect(this.mainPageLocators.inputWhatNeedsToBeDone).toBeEmpty();
   }
 
-//   async assertToDoItemWithTextIsVisible(itemText: string) {
-//     await expect(this.mainPageLocators.todoItem.filter({ hasText: itemText })).toBeVisible();
-//   }
+  //   async assertToDoItemWithTextIsVisible(itemText: string) {
+  //     await expect(this.mainPageLocators.todoItem.filter({ hasText: itemText })).toBeVisible();
+  //   }
 
   async assertToDoItemWithTextIsVisible(itemText: string) {
-  await expect(
-    this.mainPageLocators.todoItem.filter({
-      has: this.page.getByTestId('todo-title').filter({
-        hasText: new RegExp(`^${itemText}$`),
+    await expect(
+      this.mainPageLocators.todoItem.filter({
+        has: this.page.getByTestId('todo-title').filter({
+          hasText: new RegExp(`^${itemText}$`),
+        }),
       }),
-    })
-  ).toBeVisible();
-}
+    ).toBeVisible();
+  }
 
   async assertToDoItemWithTextIsNotVisible(itemText: string) {
     await expect(this.mainPageLocators.todoItem.filter({ hasText: itemText })).not.toBeVisible();
