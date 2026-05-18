@@ -54,7 +54,7 @@ src/
 
 tests/
   ui/
-    HealthCheck.tests.spec.ts
+    Tests.tests.spec.ts
 
 .github/
   workflows/

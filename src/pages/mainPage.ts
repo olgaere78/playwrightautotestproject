@@ -53,10 +53,6 @@ export class MainPage extends BasePage {
     await expect(this.mainPageLocators.inputWhatNeedsToBeDone).toBeEmpty();
   }
 
-  //   async assertToDoItemWithTextIsVisible(itemText: string) {
-  //     await expect(this.mainPageLocators.todoItem.filter({ hasText: itemText })).toBeVisible();
-  //   }
-
   async assertToDoItemWithTextIsVisible(itemText: string) {
     await expect(
       this.mainPageLocators.todoItem.filter({
