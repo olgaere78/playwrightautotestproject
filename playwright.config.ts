@@ -28,7 +28,6 @@ export default defineConfig({
 
       use: {
         browserName: 'chromium',
-        baseURL: process.env.UI_BASE_URL,
       },
     },
   ],
