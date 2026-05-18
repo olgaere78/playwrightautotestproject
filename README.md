@@ -40,3 +40,22 @@ playwright.config.ts
 package.json
 .env
 README.md
+```
+
+## Installation
+
+Initialize Playwright project:
+
+```bash
+npm init playwright@latest
+```
+
+## Install project dependencies:
+
+```bash
+npm install
+```
+
+```bash
+npm install dotenv
+```
