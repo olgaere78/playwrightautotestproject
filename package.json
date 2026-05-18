@@ -3,22 +3,37 @@
   "version": "1.0.0",
   "description": "This project is a Playwright + TypeScript automation framework for UI tests with API setup and cleanup.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/olgaere78/playwrightautotestproject.git"
+    "url": "git+https://github.com/olgaere78/playwrightautotestproject.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://gitlab.com/olgaere78/playwrightautotestproject/issues"
+    "url": "git+https://github.com/olgaere78/playwrightautotestproject/issues"
   },
-  "homepage": "https://gitlab.com/olgaere78/playwrightautotestproject#readme",
+  "homepage": "https://github.com/olgaere78/playwrightautotestproject#readme",
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.60.0",
-    "@types/node": "^25.8.0"
+    "@types/node": "^25.8.0",
+    "@typescript-eslint/eslint-plugin": "^8.59.3",
+    "@typescript-eslint/parser": "^8.59.3",
+    "eslint": "^10.4.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.8.3"
   },
   "dependencies": {
     "dotenv": "^17.4.2"
