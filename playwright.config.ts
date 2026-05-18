@@ -3,6 +3,10 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+const baseURL =
+  process.env.BASE_URL ??
+  'https://demo.playwright.dev/todomvc/#/';
+
 export default defineConfig({
   testDir: './tests',
   testMatch: '**/*.spec.ts',
@@ -15,7 +19,7 @@ export default defineConfig({
   reporter: [['html', { open: 'never' }], ['list']],
 
   use: {
-    baseURL: process.env.BASE_URL,
+    baseURL,
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',

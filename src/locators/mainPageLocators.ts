@@ -1,11 +1,27 @@
 import { Locator, Page } from '@playwright/test';
 
 export class MainPageLocators {
-  readonly navw3BarItem: Locator;
+  readonly inputWhatNeedsToBeDone: Locator;
+  readonly todoItem: Locator;
+  readonly todoTitle: Locator;
+  readonly checkbox: Locator;
+  readonly completed: Locator;
+  readonly active: Locator;
+  readonly all: Locator;
+  readonly clearItems: Locator;
 
   constructor(private page: Page) {
-    this.navw3BarItem = this.page.locator('.tnb-desktop-nav.w3-bar-item');
+    this.inputWhatNeedsToBeDone = this.page.getByPlaceholder('What needs to be done?');
+    this.todoItem = this.page.getByTestId('todo-item');
+    this.todoTitle = this.page.getByTestId('todo-title');
+    this.checkbox = this.page.getByRole('checkbox', { name: 'Toggle Todo' });
+    this.completed = this.page.getByRole('link', { name: 'Completed' });
+    this.active = this.page.getByRole('link', { name: 'Active' });
+    this.all = this.page.getByRole('link', { name: 'All' });
+    this.clearItems = this.page.getByRole('button', { name: 'Clear completed' });
   }
 
-  getNavBarButtonByName = (name: string) => this.page.getByRole('button', { name });
+  getCheckboxByTitle = (title: string): Locator =>
+    this.page.getByTestId('todo-item').filter({ hasText: title }).getByRole('checkbox');
 }
+

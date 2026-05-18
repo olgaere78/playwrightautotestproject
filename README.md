@@ -4,15 +4,31 @@
 
 This project is a Playwright + TypeScript automation framework for UI tests with API setup and cleanup.
 
+The framework includes:
+
+- UI automation with Playwright
+- reusable Page Object Model architecture
+- fixtures
+- environment configuration
+- GitHub Actions CI
+- ESLint + Prettier setup
+- Husky pre-push hooks
+- HTML reporting
+- screenshots/videos/traces on failure
+
+---
+
 ## Tech Stack
 
-- Playwright
 - TypeScript
+- Playwright `^1.60.0`
 - Node.js
-- Page Object Model
-- Fixtures
-- API services
-- dotenv
+- dotenv `^17.4.2`
+- ESLint `^10.4.0`
+- Prettier `^3.8.3`
+- Husky `^9.1.7`
+
+---
 
 ## Project Structure
 
@@ -26,36 +42,26 @@ src/
   config/
     env.ts
   data/
+    todo.data.ts
   fixtures/
-    base.fixture.ts
+    app-fixture.ts
   locators/
+    mainPageLocators.ts
   pages/
-    base.page.ts
+    basePage.ts
+    mainPage.ts
   types/
 
 tests/
   ui/
+    HealthCheck.tests.spec.ts
+
+.github/
+  workflows/
+    playwright.yml
 
 playwright.config.ts
 package.json
 .env
 README.md
-```
-
-## Installation
-
-Initialize Playwright project:
-
-```bash
-npm init playwright@latest
-```
-
-## Install project dependencies:
-
-```bash
-npm install
-```
-
-```bash
-npm install dotenv
 ```
