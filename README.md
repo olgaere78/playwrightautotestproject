@@ -67,30 +67,63 @@ README.md
 ```
 
 ## Install Dependencies
+
 ```bash
 npm install
 ```
+
 ## Install Playwright Browsers
-``` bash
+
+```bash
 npx playwright install
 ```
+
 ## Initialize ESLint and Prettier
+
 ```bash
 npm install -D eslint prettier
 ```
+
 ## Initialize ESLint
+
 ```
 npx eslint --init
 ```
+
 ## Initialize Husky
+
 ```bash
 npx husky init
 ```
+
 ## Run Tests
+
 ```
 npx playwright test
 ```
+
 ## Generate HTML Report
+
 ```bash
 npx playwright show-report
+```
+
+## Code Quality
+
+### Run ESLint
+
+```bash
+npm run lint
+```
+
+### Check formatting
+
+```bash
+npm run format:check
+```
+
+### Fix formatting automatically
+
+```bash
+npx prettier --write .
 ```

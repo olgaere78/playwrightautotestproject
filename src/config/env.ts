@@ -6,6 +6,4 @@ function getEnv(name: string) {
   }
   return value;
 }
-export const env = {
-  //baseEmail: getEnv('BASE_EMAIL'),
-};
+
