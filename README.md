@@ -65,3 +65,32 @@ package.json
 .env
 README.md
 ```
+
+## Install Dependencies
+```bash
+npm install
+```
+## Install Playwright Browsers
+``` bash
+npx playwright install
+```
+## Initialize ESLint and Prettier
+```bash
+npm install -D eslint prettier
+```
+## Initialize ESLint
+```
+npx eslint --init
+```
+## Initialize Husky
+```bash
+npx husky init
+```
+## Run Tests
+```
+npx playwright test
+```
+## Generate HTML Report
+```bash
+npx playwright show-report
+```

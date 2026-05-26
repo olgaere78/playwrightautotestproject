@@ -1,11 +1,10 @@
 import { test } from '../../src/fixtures/app-fixture';
-import { env } from '../../src/config/env';
 import { todoItems } from '../../src/data/todo.data';
 
 test.describe('TodoMVC tests', () => {
   test.beforeEach(async ({ app }) => {
     await app.mainPage.goto();
-    await app.mainPage.assertUrlIs(env.baseUrl);
+    app.mainPage.assertUrlIs('/');
   });
 
   test('should add a new todo item', async ({ app }) => {

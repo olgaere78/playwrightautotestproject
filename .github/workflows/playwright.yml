@@ -12,8 +12,6 @@ jobs:
 
     env:
       BASE_URL: ${{ secrets.BASE_URL }}
-      DEFAULT_EMAIL: ${{ secrets.DEFAULT_EMAIL }}
-      DEFAULT_PASSWORD: ${{ secrets.DEFAULT_PASSWORD }}
 
     steps:
       - name: Checkout repository

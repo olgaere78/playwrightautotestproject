@@ -22,8 +22,8 @@ export class MainPage extends BasePage {
     if (!isChecked) {
       await checkbox.check();
     }
-    await checkbox.check();
   }
+
   async clickOnCompletedFilter() {
     await this.mainPageLocators.completed.click();
   }

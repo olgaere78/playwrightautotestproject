@@ -1,4 +1,4 @@
-import { APIRequestContext } from 'playwright/test';
+import { APIRequestContext } from '@playwright/test';
 
 export class ApiClient {
   private readonly request: APIRequestContext;
@@ -31,10 +31,10 @@ export class ApiClient {
     return response;
   }
 
-  async post(url: string, options: { headers?: Record<string, string>; body: Object }) {
-    return await this.request.post(url, {
-      headers: this.getHeaders(options?.headers),
-      data: options?.body,
+  async post<T>(url: string, options: { headers?: Record<string, string>; body?: T }) {
+    return this.request.post(url, {
+      headers: this.getHeaders(options.headers),
+      data: options.body,
     });
   }
 

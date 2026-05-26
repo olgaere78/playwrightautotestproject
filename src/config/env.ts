@@ -7,5 +7,5 @@ function getEnv(name: string) {
   return value;
 }
 export const env = {
-  baseUrl: getEnv('BASE_URL'),
+  //baseEmail: getEnv('BASE_EMAIL'),
 };
