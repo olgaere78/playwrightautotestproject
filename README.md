@@ -39,8 +39,6 @@ src/
     services/
   app/
     app.ts
-  config/
-    env.ts
   data/
     todo.data.ts
   fixtures/
