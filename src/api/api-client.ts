@@ -38,8 +38,8 @@ export class ApiClient {
     });
   }
 
-  async delete(url: string, options?: { headers?: Record<string, string>; body: Object }) {
-    return await this.request.delete(url, {
+  async delete(url: string, options?: { headers?: Record<string, string>; body?: unknown }) {
+    return this.request.delete(url, {
       headers: this.getHeaders(options?.headers),
       data: options?.body,
     });

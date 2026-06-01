@@ -7,7 +7,7 @@ export class AuthService {
     const response = await this.apiClient.post('/login', {
       body: {
         email,
-        password: password,
+        password,
       },
     });
 

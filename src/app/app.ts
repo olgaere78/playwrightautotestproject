@@ -1,10 +1,10 @@
 import { Page } from '@playwright/test';
-import { MainPage } from '../pages/mainPage';
+import { TodoMvcPage } from '../pages/todoMvcPage';
 
 export class App {
-  readonly mainPage: MainPage;
+  readonly todoMvc: TodoMvcPage;
 
   constructor(page: Page) {
-    this.mainPage = new MainPage(page);
+    this.todoMvc = new TodoMvcPage(page);
   }
 }

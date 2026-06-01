@@ -1,9 +1,7 @@
 import { defineConfig } from '@playwright/test';
-import dotenv from 'dotenv';
+import { env } from './src/config/env';
 
-dotenv.config();
-
-const baseURL = process.env.BASE_URL ?? 'https://demo.playwright.dev/todomvc/#/';
+const baseURL = env.baseURL;
 
 export default defineConfig({
   testDir: './tests',

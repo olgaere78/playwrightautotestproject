@@ -1,11 +1,9 @@
+// Deterministic test data for validation scenarios (no randomness).
+// TodoMVC persists items in localStorage, and our fixture clears it per test.
 export const todoItems = [
-  'First task',
-  'Hello World',
-  'Playwright Automation',
-  'QA Engineer',
-  '1234567890',
-  'Todo Item',
-  'Single Letter Item',
-  'Long todo item with multiple words for testing purposes',
-  'Тест українською',
+  'A', // min length
+  'a1', // letters + digits
+  'AlphaNumeric123',
+  'X'.repeat(100), // boundary-ish length
+  'EditedTitle',
 ];

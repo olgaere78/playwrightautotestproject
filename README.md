@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a Playwright + TypeScript automation framework for UI tests with API setup and cleanup.
+This project is a Playwright + TypeScript automation framework for UI tests against the TodoMVC demo app.
 
 The framework includes:
 
@@ -35,24 +35,27 @@ The framework includes:
 ```txt
 src/
   api/
-    clients/
-    services/
+    api-client.ts
+    auth.service.ts
   app/
     app.ts
+  config/
+    env.ts
   data/
+    todo.builder.ts
     todo.data.ts
+    todo.invalid.data.ts
   fixtures/
     app-fixture.ts
   locators/
     mainPageLocators.ts
   pages/
     basePage.ts
-    mainPage.ts
-  types/
+    todoMvcPage.ts
 
 tests/
   ui/
-    Tests.tests.spec.ts
+    todomvc.spec.ts
 
 .github/
   workflows/
@@ -61,8 +64,13 @@ tests/
 playwright.config.ts
 package.json
 .env
+tsconfig.json
 README.md
 ```
+
+## Environment Variables
+
+- `BASE_URL` (optional): defaults to `https://demo.playwright.dev`
 
 ## Install Dependencies
 
@@ -105,6 +113,12 @@ npx playwright test
 ```bash
 npx playwright show-report
 ```
+
+## Recommendations
+
+- Prefer `page.goto('/todomvc/#/')` + Playwright `use.baseURL` (configured in `playwright.config.ts`) for navigation.
+- Keep page objects focused on user actions (`addTodo`, `setTodoCompleted`, `editTodoTitle`) and assertions; keep selectors inside page objects.
+- Reset app state between tests (TodoMVC stores state in `localStorage`) using the fixture in `src/fixtures/app-fixture.ts`.
 
 ## Code Quality
 
